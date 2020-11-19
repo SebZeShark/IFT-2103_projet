@@ -19,10 +19,16 @@ public class shoot : MonoBehaviour
     {
         if (m_tirer.triggered)
         {
-            m_boulet.GetComponent<physics>().speed = new Vector3(0,
-            25 * Mathf.Sin((15 * Mathf.PI) / 180),
-            25 * Mathf.Cos((15 * Mathf.PI) / 180));
-            Instantiate(m_boulet, transform.position + new Vector3(0, 0.5f, 0.5f), Quaternion.identity);
+            Vector3 v3 = new Vector3(0f, 0f, 40f);
+            v3 = Quaternion.Euler(-20f, 0f, 0f) * v3;
+            v3 = Quaternion.Euler(transform.rotation.eulerAngles) * v3;
+            m_boulet.GetComponent<physics>().speed = v3;
+            Instantiate(m_boulet, 
+                transform.position + (Quaternion.Euler(transform.rotation.eulerAngles) * new Vector3(0, 0.5f, 0.5f)), 
+                transform.rotation);
+
+            Debug.Log("y " + transform.rotation.y);
+            Debug.Log("w " + transform.rotation.w);
         }
     }
 
