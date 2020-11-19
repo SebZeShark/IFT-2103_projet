@@ -19,6 +19,9 @@ public class shoot : MonoBehaviour
     {
         if (m_tirer.triggered)
         {
+            m_boulet.GetComponent<physics>().speed = new Vector3(0,
+            25 * Mathf.Sin((15 * Mathf.PI) / 180),
+            25 * Mathf.Cos((15 * Mathf.PI) / 180));
             Instantiate(m_boulet, transform.position + new Vector3(0, 0.5f, 0.5f), Quaternion.identity);
         }
     }
