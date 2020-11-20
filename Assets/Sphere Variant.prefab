@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f447358e9ee1241b59aee9938e9d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: -19.705025, y: 0, z: 3.4222853}
+  speed: {x: -9.257992, y: 0, z: 17.728214}
 --- !u!1001 &8167720099735999766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,6 +120,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085373890174744046, guid: 6d83e8fa7ba104248bcabe605751ef5c,
+        type: 3}
+      propertyPath: m_TagString
+      value: projectile
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8157284280424321784, guid: 6d83e8fa7ba104248bcabe605751ef5c, type: 3}

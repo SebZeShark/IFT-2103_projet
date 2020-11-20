@@ -9,7 +9,7 @@ public class bouletDeCannon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        time = 5f;
+        time = 3f;
     }
 
     // Update is called once per frame
