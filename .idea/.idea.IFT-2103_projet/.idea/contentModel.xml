@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="bouletDeCannon.cs" t="Include" />
+        <e p="Menu.cs" t="Include" />
         <e p="Movement.cs" t="Include" />
         <e p="physics.cs" t="Include" />
         <e p="shoot.cs" t="Include" />
