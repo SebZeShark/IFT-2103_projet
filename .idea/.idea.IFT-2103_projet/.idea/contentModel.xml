@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Proprio\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Proprio\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_IFT-2103_projet.1116416572.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Proprio\Desktop\Varié\Uni\Jeu Video\IFT-2103_projet" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="bouletDeCannon.cs" t="Include" />
+        <e p="Movement.cs" t="Include" />
+        <e p="physics.cs" t="Include" />
+        <e p="shoot.cs" t="Include" />
+      </e>
+      <e p="IFT-2103_projet.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

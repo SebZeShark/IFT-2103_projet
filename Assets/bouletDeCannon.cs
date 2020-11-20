@@ -1,21 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class bouletDeCannon : MonoBehaviour
 {
-    int time;
+    float time;
     // Start is called before the first frame update
     void Start()
     {
-        time = 500;
+        time = 5f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        time -= 1;
+        time -= Time.deltaTime;
         if (time <= 0)
             Destroy(gameObject);
     }
+
 }
