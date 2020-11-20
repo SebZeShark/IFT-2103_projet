@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gestionVie : MonoBehaviour
 {
@@ -21,7 +22,10 @@ public class gestionVie : MonoBehaviour
     {
         if(life <= 0)
         {
+            PlayerPrefs.SetString("Perdant", color);
+            PlayerPrefs.SetString("Gagnant", joueur2.GetComponent<gestionVie>().color);
             Debug.Log("Le joueur " + joueur2.GetComponent<gestionVie>().color + " a gagné!");
+            SceneManager.LoadScene("FinDePartie");
         }
     }
 

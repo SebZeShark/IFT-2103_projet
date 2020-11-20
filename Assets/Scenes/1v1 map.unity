@@ -2903,7 +2903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530734dcee80b484c9208bdd0cf9f55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 100
+  life: 10
   color: Bleu
   joueur2: {fileID: 1481087704}
   t_vie: {fileID: 1409965942}
