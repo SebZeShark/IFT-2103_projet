@@ -9,4 +9,9 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("1v1 map");
     }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
 }
