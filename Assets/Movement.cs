@@ -5,17 +5,24 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-    public InputAction m_movement;
-    public InputAction m_rotation;
+    InputAction m_movement;
+    InputAction m_rotation;
+    public InputActionAsset settings;
+    public string player;
 
     // Start is called before the first frame update
     void Start()
     {
+        m_movement = settings.FindActionMap(player).FindAction("Avancer");
+        m_movement.Enable();
+        m_rotation = settings.FindActionMap(player).FindAction("Tourner");
+        m_rotation.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(m_movement.GetBindingDisplayString());
         // Deplacement vers l'avant
 
         Vector3 direction = transform.forward * m_movement.ReadValue<float>();
@@ -26,11 +33,6 @@ public class Movement : MonoBehaviour
 
     }
 
-    public void OnEnable()
-    {
-        m_movement.Enable();
-        m_rotation.Enable();
-    }
     public void OnDisable()
     {
         m_movement.Disable();

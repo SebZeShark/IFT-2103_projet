@@ -1722,7 +1722,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481087704}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -1741,25 +1741,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: lol
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 6867e954-a679-4b65-8598-804849245905
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c056c627-0f6e-4458-90b3-ba67f8942ea3
-    m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 637bfbea-524a-4914-a22b-f53eb69ba183
@@ -1804,9 +1785,29 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b9e55b9a-3c4d-4f23-bc78-f10c66b1706b
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: baabfda5-126e-4acf-80db-e7ca189bbc97
+    m_ActionName: Player1/TournerG[/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2f7c352b-07d0-43a6-9118-ada390840923
+    m_ActionName: Player2/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6c4e2789-91fb-456a-ab4b-cd132e46c7e5
+    m_ActionName: Player2/Fire[/Mouse/leftButton,/Keyboard/numpadEnter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 83a7ca0b-00c6-47b2-9104-79b347313d4d
+    m_ActionName: Player1/Avancer[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d42ce197-6426-480d-b5b5-b23f999eb82d
+    m_ActionName: Player2/Avancer[/Keyboard/downArrow,/Keyboard/upArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: Player2
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1365984777}
 --- !u!114 &1481087707
@@ -1821,70 +1822,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45cddbea25cae241a05a1744efe8aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_movement:
-    m_Name: Movement
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 6566d14f-6976-42d1-abd8-3bc282942853
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: c66ee335-de93-4d52-812a-2aaaf432eeac
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: 5fc603e2-3fa5-4514-afbb-20f26389b2d0
-      m_Path: <Keyboard>/downArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: c61b540a-b8d1-4e4a-82bd-497678cc826d
-      m_Path: <Keyboard>/upArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-  m_rotation:
-    m_Name: Rotation
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: ea6092f7-d9f9-4284-98c5-f118cd92569a
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: 821fecef-8ab2-4a64-969c-ecc3a92bcad5
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotation
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: d26c422f-01e8-4a7a-b87d-6b02cb17903e
-      m_Path: <Keyboard>/leftArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotation
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: b27d47c1-9997-40fd-bd0c-3a341093048f
-      m_Path: <Keyboard>/rightArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotation
-      m_Flags: 8
+  settings: {fileID: -944628639613478452, guid: 3fcaf9bb7287d2b4eb9f4201e09c7846,
+    type: 3}
+  player: Player2
 --- !u!65 &1481087708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1975,24 +1915,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d25860fc09bf3b48b9ecf1fa7d42184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_tirer:
-    m_Name: Tirer
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 0c1ba067-76a7-4b96-be90-31131150c831
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: e981a523-1db4-4cee-8683-4019a20bfd11
-      m_Path: <Keyboard>/numpadEnter
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Tirer
-      m_Flags: 0
+  settings: {fileID: -944628639613478452, guid: 3fcaf9bb7287d2b4eb9f4201e09c7846,
+    type: 3}
   m_boulet: {fileID: 5326557419400093944, guid: 0e3dd054a7fa1da4f8c179889e6da5b4,
     type: 3}
+  player: Player2
 --- !u!114 &1481087713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2583,7 +2510,6 @@ GameObject:
   - component: {fileID: 2111738999}
   - component: {fileID: 2111738998}
   - component: {fileID: 2111738997}
-  - component: {fileID: 2111739002}
   - component: {fileID: 2111739003}
   - component: {fileID: 2111739004}
   - component: {fileID: 2111739001}
@@ -2685,164 +2611,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45cddbea25cae241a05a1744efe8aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_movement:
-    m_Name: Movement
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 24ff7528-9eb3-4852-879d-989fa5502381
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: 385a0c54-c7fb-4993-a458-48a413973fe2
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: dabb65db-dddb-4a74-89cf-4669937fcbb9
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 99c580c1-918b-4435-a9c9-a8caa5fea924
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-  m_rotation:
-    m_Name: Rotation
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: d513c1ae-be0a-49af-a0d8-912c58641d8d
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: 4bd86856-076f-42b1-9df0-c121104c1a88
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotation
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: c754788b-47c3-4ad7-8265-773282219ad7
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotation
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 70c34aa5-ac8d-4b12-8de3-24cf0256aa10
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotation
-      m_Flags: 8
---- !u!114 &2111739002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111738996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 3fcaf9bb7287d2b4eb9f4201e09c7846,
+  settings: {fileID: -944628639613478452, guid: 3fcaf9bb7287d2b4eb9f4201e09c7846,
     type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: lol
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 6867e954-a679-4b65-8598-804849245905
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c056c627-0f6e-4458-90b3-ba67f8942ea3
-    m_ActionName: Player/Look[/Mouse/delta]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 637bfbea-524a-4914-a22b-f53eb69ba183
-    m_ActionName: Player/Fire[/Mouse/leftButton,/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 366e48e3-7519-48a2-9541-6f63782d3d4a
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2c204c8f-00ea-43b3-b232-eefa3d07124b
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: af7a09c0-4241-41a9-8cde-3c4a7d32de4f
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5f34030e-52cc-4948-8723-ac6a69423f7c
-    m_ActionName: UI/Point[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2eead2b4-c316-4431-8101-9ce740e97a24
-    m_ActionName: UI/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e2f7019e-69ff-45ba-b7eb-9c8a68cd27e8
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: aba93666-0197-48ea-a55c-d3b16493a35c
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ea83c71d-d5ec-4b48-ac59-ab6ec0bbd723
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 105026b5-e82d-4625-bd59-01ee2a8025a8
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b9e55b9a-3c4d-4f23-bc78-f10c66b1706b
-    m_ActionName: UI/TrackedDeviceOrientation
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 963194227}
+  player: Player1
 --- !u!143 &2111739003
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2852,7 +2623,7 @@ CharacterController:
   m_GameObject: {fileID: 2111738996}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 1
   m_Radius: 0.5
@@ -2873,24 +2644,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d25860fc09bf3b48b9ecf1fa7d42184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_tirer:
-    m_Name: Tirer
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 5ff47626-d85c-4380-aaa5-bfafbce526ed
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 65bd4dd4-04fb-4f5f-85d2-9e141386ab92
-      m_Path: <Keyboard>/space
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Tirer
-      m_Flags: 0
+  settings: {fileID: -944628639613478452, guid: 3fcaf9bb7287d2b4eb9f4201e09c7846,
+    type: 3}
   m_boulet: {fileID: 5326557419400093944, guid: 0e3dd054a7fa1da4f8c179889e6da5b4,
     type: 3}
+  player: Player1
 --- !u!114 &2111739005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2903,7 +2661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530734dcee80b484c9208bdd0cf9f55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 10
+  life: 100
   color: Bleu
   joueur2: {fileID: 1481087704}
   t_vie: {fileID: 1409965942}

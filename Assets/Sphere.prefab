@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a6b2358095781847955d2c3fdd5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coll: {fileID: 0}
 --- !u!54 &585492347134644908
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -133,7 +134,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4085373890174744046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f447358e9ee1241b59aee9938e9d10, type: 3}
+  m_Script: {fileID: 11500000, guid: b8ca7941cd771c34a82194b5552545fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 0, y: 0, z: 0}
