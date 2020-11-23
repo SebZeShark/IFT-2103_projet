@@ -29,6 +29,57 @@ public class options : MonoBehaviour
     {
     }
 
+    // Awake
+    void Awake()
+    {
+        // J1
+        // Avancer
+        InputAction act = settings.FindActionMap("Player1").FindAction("Avancer");
+        var bindIndex = act.bindings.IndexOf(x => x.isPartOfComposite && x.name == "positive");
+        b_avancer.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(bindIndex);
+
+        // Reculer
+        bindIndex = act.bindings.IndexOf(x => x.isPartOfComposite && x.name == "negative");
+        b_reculer.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(bindIndex);
+
+        // Tourner Gauche
+        act = settings.FindActionMap("Player1").FindAction("Tourner");
+        bindIndex = act.bindings.IndexOf(x => x.isPartOfComposite && x.name == "negative");
+        b_gauche.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(bindIndex);
+
+        // Tourner Droite
+        bindIndex = act.bindings.IndexOf(x => x.isPartOfComposite && x.name == "positive");
+        b_droite.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(bindIndex);
+
+        // Tirer
+        act = settings.FindActionMap("Player1").FindAction("Fire");
+        b_tirer.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(0);
+
+
+        // J2
+        // Avancer
+        act = settings.FindActionMap("Player2").FindAction("Avancer");
+        bindIndex = act.bindings.IndexOf(x => x.isPartOfComposite && x.name == "positive");
+        b_avancer_j2.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(bindIndex);
+
+        // Reculer
+        bindIndex = act.bindings.IndexOf(x => x.isPartOfComposite && x.name == "negative");
+        b_reculer_j2.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(bindIndex);
+
+        // Tourner Gauche
+        act = settings.FindActionMap("Player2").FindAction("Tourner");
+        bindIndex = act.bindings.IndexOf(x => x.isPartOfComposite && x.name == "negative");
+        b_gauche_j2.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(bindIndex);
+
+        // Tourner Droite
+        bindIndex = act.bindings.IndexOf(x => x.isPartOfComposite && x.name == "positive");
+        b_droite_j2.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(bindIndex);
+
+        // Tirer
+        act = settings.FindActionMap("Player2").FindAction("Fire");
+        b_tirer_j2.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(0);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -119,13 +170,16 @@ public class options : MonoBehaviour
             act.ApplyBindingOverride(act.bindings[bindIndex]); 
         }
 
-        rebind = act.PerformInteractiveRebinding();
+        //rebind = act.PerformInteractiveRebinding();
 
         rebind.WithControlsExcluding("Mouse");
         rebind.WithTargetBinding(bindIndex);
         rebind.WithCancelingThrough("<Keyboard>/escape");
         rebind.OnMatchWaitForAnother(0.1f);
-        rebind.Start().OnCancel(x => CleanUp()).OnComplete(x =>
+        rebind.Start().OnCancel(x => 
+        {
+            CleanUp();
+        }).OnComplete(x =>
         {
             saveChanges();
             CleanUp();
