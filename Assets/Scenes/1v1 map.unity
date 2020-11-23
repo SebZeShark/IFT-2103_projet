@@ -1570,7 +1570,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: h
+  m_Text: "La vie v\xE0 ici"
 --- !u!222 &1409965943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1836,7 +1836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530734dcee80b484c9208bdd0cf9f55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 100
+  life: 15
   color: Rouge
   joueur2: {fileID: 2111738996}
   t_vie: {fileID: 1743133997}
@@ -2097,7 +2097,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "La vie v\xE0 l\xE0"
 --- !u!222 &1743133998
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2565,7 +2565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530734dcee80b484c9208bdd0cf9f55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 100
+  life: 15
   color: Bleu
   joueur2: {fileID: 1481087704}
   t_vie: {fileID: 1409965942}
