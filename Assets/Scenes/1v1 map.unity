@@ -2007,6 +2007,7 @@ MonoBehaviour:
   m_boulet: {fileID: 4085373890174744046, guid: 6d83e8fa7ba104248bcabe605751ef5c,
     type: 3}
   player: Player2
+  shootColldown: 2
 --- !u!114 &1481087713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2019,7 +2020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530734dcee80b484c9208bdd0cf9f55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 15
+  life: 3
   color: Rouge
   joueur2: {fileID: 2111738996}
   t_vie: {fileID: 1743133997}
@@ -2736,6 +2737,7 @@ MonoBehaviour:
   m_boulet: {fileID: 4085373890174744046, guid: 6d83e8fa7ba104248bcabe605751ef5c,
     type: 3}
   player: Player1
+  shootColldown: 2
 --- !u!114 &2111739005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2748,7 +2750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530734dcee80b484c9208bdd0cf9f55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 15
+  life: 3
   color: Bleu
   joueur2: {fileID: 1481087704}
   t_vie: {fileID: 1409965942}

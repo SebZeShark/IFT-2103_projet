@@ -14,8 +14,29 @@ public class Movement : MonoBehaviour
     void Start()
     {
         m_movement = settings.FindActionMap(player).FindAction("Avancer");
-        m_movement.Enable();
+        var negative = m_movement.bindings.IndexOf(b => b.name == "negative");
+        var positive = m_movement.bindings.IndexOf(b => b.name == "positive");
+
+        string[] actions = { "Avancer", "Tourner" };
+        string[] axes = { "negative", "positive" };
+
+        foreach (string action in actions)
+        {
+            foreach (string axe in axes)
+            {
+                string overBind = PlayerPrefs.GetString(player + action + axe);
+                if (overBind != "")
+                {
+                    var act = settings.FindActionMap(player).FindAction(action);
+                    act.ApplyBindingOverride(act.bindings.IndexOf(b => b.name == axe), overBind);
+                }
+            }
+        }
+
+
         m_rotation = settings.FindActionMap(player).FindAction("Tourner");
+
+        m_movement.Enable();
         m_rotation.Enable();
     }
 

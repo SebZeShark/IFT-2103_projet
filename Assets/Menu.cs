@@ -12,6 +12,7 @@ public class Menu : MonoBehaviour
 
     public void CloseGame()
     {
+        PlayerPrefs.DeleteAll(); // Pour être sur que les paramètres de touches redeviennent normaux en fermant l'application
         Application.Quit();
     }
 

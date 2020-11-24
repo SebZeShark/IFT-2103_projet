@@ -32,6 +32,10 @@ public class options : MonoBehaviour
     // Awake
     void Awake()
     {
+        DontDestroyOnLoad(settings);
+
+        overrideBind(); // Applique les changement de contrôles préallables
+
         // J1
         // Avancer
         InputAction act = settings.FindActionMap("Player1").FindAction("Avancer");
@@ -83,7 +87,6 @@ public class options : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(k.FindAction("Avancer").GetBindingDisplayString());
     }
 
     public void onAvancer(int player)
@@ -167,7 +170,7 @@ public class options : MonoBehaviour
                         b_gauche_j2.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(bindIndex);
                 }
             }
-            act.ApplyBindingOverride(act.bindings[bindIndex]); 
+            PlayerPrefs.SetString("Player" + player + action + sensAxe, act.bindings[bindIndex].overridePath);
         }
 
         //rebind = act.PerformInteractiveRebinding();
@@ -210,7 +213,7 @@ public class options : MonoBehaviour
                 b_tirer.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(0);
             if(player == 2)
                 b_tirer_j2.GetComponentInChildren<Text>().text = act.GetBindingDisplayString(0);
-            act.ApplyBindingOverride(0, act.bindings[0]);
+            PlayerPrefs.SetString("FirePlayer" + player, act.bindings[0].overridePath);
         }
 
         rebind = act.PerformInteractiveRebinding();
@@ -228,5 +231,36 @@ public class options : MonoBehaviour
     void finishedRebind()
     {
         b_save.interactable = true;
+    }
+
+    private void OnDisable()
+    {
+        settings.Disable();
+    }
+
+    void overrideBind()
+    {
+        string[] players = { "Player1", "Player2" };
+        string[] actions = { "Avancer", "Tourner" };
+        string[] axes = { "negative", "positive" };
+
+        foreach (string player in players)
+        {
+            foreach (string action in actions)
+            {
+                foreach (string axe in axes)
+                {
+                    string overBind = PlayerPrefs.GetString(player + action + axe);
+                    if (overBind != "")
+                    {
+                        var act = settings.FindActionMap(player).FindAction(action);
+                        act.ApplyBindingOverride(act.bindings.IndexOf(b => b.name == axe), overBind);
+                    }
+                }
+            }
+
+            if (PlayerPrefs.GetString("Fire" + player) != "")
+                settings.FindActionMap(player).FindAction("Fire").ApplyBindingOverride(PlayerPrefs.GetString("Fire" + player));
+        }
     }
 }

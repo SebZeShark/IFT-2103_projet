@@ -17,6 +17,8 @@ public class shoot : MonoBehaviour
     void Start()
     {
         m_tirer = settings.FindActionMap(player).FindAction("Fire");
+        if (PlayerPrefs.GetString("Fire" + player) != "")
+            m_tirer.ApplyBindingOverride(PlayerPrefs.GetString("Fire" + player));
         m_tirer.Enable();
         shootTimer = shootColldown;
     }

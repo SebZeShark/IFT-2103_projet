@@ -15,6 +15,7 @@ public class menuFin : MonoBehaviour
 
     public void onClicNon()
     {
+        PlayerPrefs.DeleteAll(); // Pour être sur que les paramètres de touches redeviennent normaux en fermant l'application
         Application.Quit();
     }
 
