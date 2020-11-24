@@ -22,11 +22,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(m_movement.GetBindingDisplayString());
         // Deplacement vers l'avant
 
         Vector3 direction = transform.forward * m_movement.ReadValue<float>();
-        Vector3 velocity = direction * 15;
+        Vector3 velocity = direction * 5;
         transform.position += velocity * Time.deltaTime;
 
         transform.rotation *= new Quaternion(0f, 2f * Time.deltaTime * m_rotation.ReadValue<float>(), 0f, 1f);

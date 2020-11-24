@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/parametres.unity
     guid: 25525b59827c4434ab29f13c4f07aff9
+  - enabled: 1
+    path: Assets/Scenes/PvAi map.unity
+    guid: 956bf1ea88ff6f841a56aeba5cfea6f3
   m_configObjects: {}
