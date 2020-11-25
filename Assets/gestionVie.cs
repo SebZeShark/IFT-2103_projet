@@ -24,7 +24,6 @@ public class gestionVie : MonoBehaviour
         {
             PlayerPrefs.SetString("Perdant", color);
             PlayerPrefs.SetString("Gagnant", joueur2.GetComponent<gestionVie>().color);
-            Debug.Log("Le joueur " + joueur2.GetComponent<gestionVie>().color + " a gagné!");
             SceneManager.LoadScene("FinDePartie");
         }
     }

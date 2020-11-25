@@ -12,10 +12,12 @@
         <e p="Grid.cs" t="Include" />
         <e p="Menu.cs" t="Include" />
         <e p="menuFin.cs" t="Include" />
+        <e p="menuPause.cs" t="Include" />
         <e p="Movement.cs" t="Include" />
         <e p="Node.cs" t="Include" />
         <e p="options.cs" t="Include" />
         <e p="physics.cs" t="Include" />
+        <e p="scriptAcceuil.cs" t="Include" />
         <e p="shoot.cs" t="Include" />
       </e>
       <e p="IFT-2103_projet.sln" t="IncludeFlat" />

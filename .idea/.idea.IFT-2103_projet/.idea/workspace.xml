@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6117a911-16c2-40e5-8e1c-93b6707e5019" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IFT-2103_projet/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IFT-2103_projet/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IFT-2103_projet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IFT-2103_projet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AiMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AiMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/46b7a0-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/46b7a0-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/d69a67-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/d69a67-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/gestionVie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/gestionVie.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/menuFin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/menuFin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scriptAcceuil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptAcceuil.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +48,10 @@
         <option value="$PROJECT_DIR$/Assets/Menu.cs" />
         <option value="$PROJECT_DIR$/Assets/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/shoot.cs" />
-        <option value="$PROJECT_DIR$/Assets/gestionVie.cs" />
         <option value="$PROJECT_DIR$/Assets/AiMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/gestionVie.cs" />
+        <option value="$PROJECT_DIR$/Assets/menuFin.cs" />
+        <option value="$PROJECT_DIR$/Assets/scriptAcceuil.cs" />
       </list>
     </option>
   </component>
@@ -102,6 +101,7 @@
       <workItem from="1606180599519" duration="4298000" />
       <workItem from="1606276342198" duration="3231000" />
       <workItem from="1606315865170" duration="3628000" />
+      <workItem from="1606344884375" duration="673000" />
     </task>
     <servers />
   </component>

@@ -38,7 +38,7 @@ public class scriptAcceuil : MonoBehaviour
         }
         if (charging)
         {
-            textChargement.text = "Allo: " 
+            textChargement.text = "Chargement: " 
                 + ((int)chargement).ToString() 
                 + "%";
             chargement += 0.3141592f;

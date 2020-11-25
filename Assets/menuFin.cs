@@ -16,7 +16,7 @@ public class menuFin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textFin.text = "Fuck you " + PlayerPrefs.GetString("Perdant") + ", t'as perdu parce que t'es mauvais!\nTu veux rejouer ? ";
+        textFin.text = "Le joueur gagnant est " + PlayerPrefs.GetString("Gagnant") + "!";
     }
 
     // Update is called once per frame
