@@ -37,6 +37,7 @@ public class AiMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         FindPath(transform.position, player.transform.position);
         TravelAlongPath();
     }
@@ -47,8 +48,11 @@ public class AiMovement : MonoBehaviour
         {
             Node nextNode = path[0];
             Vector3 travelPoint = GridReference.WorldPointFromNode(nextNode);
-            RotateToPoint(travelPoint);
-            transform.position += transform.forward * 5 * Time.deltaTime;
+            var canMove = RotateToPoint(travelPoint);
+            if (canMove)
+            {
+                transform.position += transform.forward * 5 * Time.deltaTime;
+            }
             if (Vector3.Distance(travelPoint, transform.position) < 1)
             {
                 path.Remove(nextNode);
@@ -56,11 +60,13 @@ public class AiMovement : MonoBehaviour
         }
     }
 
-    private void RotateToPoint(Vector3 travelPoint)
+    private bool RotateToPoint(Vector3 travelPoint)
     {
         _direction = (travelPoint - transform.position).normalized;
         _lookRotation = Quaternion.LookRotation(_direction);
+        var temp = transform.rotation;
         transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
+        return temp == transform.rotation;
     }
 
     private void Shoot()

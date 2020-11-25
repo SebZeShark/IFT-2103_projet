@@ -1044,7 +1044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25.5, y: -16.199997}
+  m_AnchoredPosition: {x: -25.5, y: -16.200012}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &992697741
@@ -1306,7 +1306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1359d33e31d74497926bc8d3bdfd747c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartPosition: {fileID: 0}
   WallMask:
     serializedVersion: 2
     m_Bits: 256
@@ -2045,7 +2044,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481087704}
-  m_LocalRotation: {x: -0, y: 0.99995226, z: -0, w: 0.009775941}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.5, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2054,7 +2053,7 @@ Transform:
   - {fileID: 806899992}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 178.88, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1481087713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2105,7 +2104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -82.1, y: -15.800003}
+  m_AnchoredPosition: {x: -82.100006, y: -15.799988}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1608141732
@@ -2779,6 +2778,9 @@ MonoBehaviour:
   settings: {fileID: -944628639613478452, guid: 3fcaf9bb7287d2b4eb9f4201e09c7846,
     type: 3}
   player: Player1
+  WallMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!143 &2111739003
 CharacterController:
   m_ObjectHideFlags: 0

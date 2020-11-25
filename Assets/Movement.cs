@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,6 +10,7 @@ public class Movement : MonoBehaviour
     InputAction m_rotation;
     public InputActionAsset settings;
     public string player;
+    public LayerMask WallMask;
 
     // Start is called before the first frame update
     void Start()
@@ -47,9 +49,15 @@ public class Movement : MonoBehaviour
 
         Vector3 direction = transform.forward * m_movement.ReadValue<float>();
         Vector3 velocity = direction * 5;
-        transform.position += velocity * Time.deltaTime;
-
-        transform.rotation *= new Quaternion(0f, 2f * Time.deltaTime * m_rotation.ReadValue<float>(), 0f, 1f);
+        if (m_rotation.ReadValue<float>() == 0)
+        {
+            transform.position += velocity * Time.deltaTime;
+            if (Physics.CheckSphere(transform.position, 0.75f, WallMask))
+            {
+                transform.position -= velocity * Time.deltaTime;
+            }
+        }
+        transform.rotation *= new Quaternion(0f, Time.deltaTime * m_rotation.ReadValue<float>(), 0f, 1f);
 
     }
 
@@ -58,5 +66,4 @@ public class Movement : MonoBehaviour
         m_movement.Disable();
         m_rotation.Disable();
     }
-
 }
