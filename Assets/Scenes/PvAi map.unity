@@ -2544,7 +2544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   color: Rouge
-  joueur2: {fileID: 1481087704}
+  joueur2: {fileID: 2111738996}
   t_vie: {fileID: 1608141732}
 --- !u!1 &1608141730
 GameObject:
