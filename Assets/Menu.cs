@@ -20,4 +20,9 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("parametres");
     }
+    
+    public void PlaySolo()
+    {
+        SceneManager.LoadScene("PvAi map");
+    }
 }
