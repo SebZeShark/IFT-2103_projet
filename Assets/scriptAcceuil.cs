@@ -9,7 +9,7 @@ public class scriptAcceuil : MonoBehaviour
 {
     public GameObject p_chargement;
     public Text textChargement;
-    public InputAction keys;
+    InputAction keys;
     float chargement;
     bool charging;
 
