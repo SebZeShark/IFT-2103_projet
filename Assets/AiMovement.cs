@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class AiMovement : MonoBehaviour
 {
-    private float rotationSpeed = 4f;
+    private float rotationSpeed = 2f;
     public GameObject player;
     
     private Quaternion _lookRotation;
@@ -15,10 +15,12 @@ public class AiMovement : MonoBehaviour
     public GameObject m_boulet;
 
     private float shootTimer;
-    public float shootColldown = 2f;
+    public float shootColldown = 4f;
     private bool shotReady = true;
     private Grid GridReference;
     private List<Node> path;
+
+    private float maxRange;
     
     void Awake()
     {
@@ -29,7 +31,8 @@ public class AiMovement : MonoBehaviour
     private void Start()
     {
         path = new List<Node>();
-
+        maxRange = 40f;
+        shootTimer = shootColldown;
         GridReference = GameObject.Find("Obstacles").GetComponent<Grid>();
         FindPath(transform.position, player.transform.position);
     }
@@ -37,10 +40,20 @@ public class AiMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        FindPath(transform.position, player.transform.position);
-        TravelAlongPath();
+        Reload();
+        if (PlayerInRangeAndSight())
+        {
+            RotateToPoint(player.transform.position);
+            Shoot();
+        }
+        else
+        {
+            FindPath(transform.position, player.transform.position);
+            TravelAlongPath();
+        }
     }
+
+    #region PathFinding
 
     private void TravelAlongPath()
     {
@@ -67,16 +80,6 @@ public class AiMovement : MonoBehaviour
         var temp = transform.rotation;
         transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
         return temp == transform.rotation;
-    }
-
-    private void Shoot()
-    {
-        m_boulet.GetComponent<physics>().speed = transform.forward*20f;
-        Instantiate(m_boulet, 
-            transform.position + transform.forward, 
-            transform.rotation);
-        shotReady = false;
-        shootTimer = 0;
     }
 
     void FindPath(Vector3 a_StartPos, Vector3 a_TargetPos)
@@ -156,4 +159,50 @@ public class AiMovement : MonoBehaviour
 
         return ix + iy;//Return the sum
     }
+    #endregion
+
+    #region Shooting
+
+    private bool PlayerInRangeAndSight()
+    {
+        bool isInRangeAndSight = false;
+        RaycastHit hit;
+        if(Vector3.Distance(transform.position, player.transform.position) < maxRange )
+        {
+            if(Physics.Raycast(transform.position, (player.transform.position - transform.position), out hit, maxRange))
+            {
+                if(hit.transform == player.transform)
+                {
+                    isInRangeAndSight = true;
+                }
+            }
+        }
+        return isInRangeAndSight;
+    }
+
+    private void Reload()
+    {
+        if (!shotReady)
+        {
+            shootTimer += Time.deltaTime;
+            if (shootTimer >= shootColldown)
+            {
+                shotReady = true;
+            }
+        }
+    }
+    private void Shoot()
+    {
+        if (shotReady)
+        {
+            m_boulet.GetComponent<physics>().speed = transform.forward*20f;
+            Instantiate(m_boulet, 
+                transform.position + transform.forward, 
+                transform.rotation);
+            shootTimer = 0f;
+            shotReady = false;
+        }
+    }
+    
+    #endregion
 }

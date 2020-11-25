@@ -22,9 +22,6 @@
     <list default="true" id="6117a911-16c2-40e5-8e1c-93b6707e5019" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IFT-2103_projet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IFT-2103_projet/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AiMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AiMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1v1 map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1v1 map.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PvAi map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PvAi map.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
@@ -32,6 +29,7 @@
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/46b7a0-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/46b7a0-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/d69a67-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/d69a67-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +40,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/bouletDeCannon.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/bouletDeCannon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE47BE73-F7EF-409C-A5E5-CE4B121745B7/c3/404981a2/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -50,12 +48,12 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/BallBounce.cs" />
         <option value="$PROJECT_DIR$/Assets/bouletDeCannon.cs" />
-        <option value="$PROJECT_DIR$/Assets/shoot.cs" />
         <option value="$PROJECT_DIR$/Assets/physics.cs" />
         <option value="$PROJECT_DIR$/Assets/Grid.cs" />
         <option value="$PROJECT_DIR$/Assets/Menu.cs" />
         <option value="$PROJECT_DIR$/Assets/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/AiMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/shoot.cs" />
       </list>
     </option>
   </component>
@@ -104,6 +102,7 @@
       <workItem from="1605847397989" duration="1043000" />
       <workItem from="1606180599519" duration="4298000" />
       <workItem from="1606276342198" duration="3231000" />
+      <workItem from="1606315865170" duration="1166000" />
     </task>
     <servers />
   </component>
@@ -126,5 +125,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1496" height="826" key="VCS.FileHistoryDialog" timestamp="1606316828457">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="92" y="92" width="1496" height="826" key="VCS.FileHistoryDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1606316828457" />
   </component>
 </project>

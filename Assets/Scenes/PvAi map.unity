@@ -1310,7 +1310,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   vGridWorldSize: {x: 60, y: 60}
-  fNodeRadius: 1
+  fNodeRadius: 2
 --- !u!4 &1105989141
 Transform:
   m_ObjectHideFlags: 0
