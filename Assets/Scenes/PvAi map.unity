@@ -1976,7 +1976,6 @@ MonoBehaviour:
   player: {fileID: 1481087704}
   m_boulet: {fileID: 4085373890174744046, guid: 6d83e8fa7ba104248bcabe605751ef5c,
     type: 3}
-  shootColldown: 1
 --- !u!65 &1481087708
 BoxCollider:
   m_ObjectHideFlags: 0

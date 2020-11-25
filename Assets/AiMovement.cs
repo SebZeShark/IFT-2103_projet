@@ -15,12 +15,18 @@ public class AiMovement : MonoBehaviour
     public GameObject m_boulet;
 
     private float shootTimer;
-    public float shootColldown = 4f;
-    private bool shotReady = true;
+    private float shootColldown = 2f;
     private Grid GridReference;
     private List<Node> path;
+    
+
+    private float reactionTime = 1f;
+    private AiState currentState;
 
     private float maxRange;
+
+    private Vector3 lastSeenPos;
+    private Vector3 target;
     
     void Awake()
     {
@@ -32,24 +38,49 @@ public class AiMovement : MonoBehaviour
     {
         path = new List<Node>();
         maxRange = 40f;
-        shootTimer = shootColldown;
+        shootTimer = 0f;
         GridReference = GameObject.Find("Obstacles").GetComponent<Grid>();
-        FindPath(transform.position, player.transform.position);
+        lastSeenPos = player.transform.position;
+        target = player.transform.position;
+        currentState = AiState.SEARCHING;
     }
 
     // Update is called once per frame
     void Update()
     {
         Reload();
-        if (PlayerInRangeAndSight())
+        
+        ChooseNextAction();
+        switch (currentState)
         {
-            RotateToPoint(player.transform.position);
-            Shoot();
+            case AiState.SEARCHING:
+                TravelAlongPath();
+                break;
+            case AiState.SHOOTING:
+                RotateToPoint(target);
+                Shoot();
+                break;
         }
-        else
+        
+        
+    }
+
+    private void ChooseNextAction()
+    {
+        reactionTime -= Time.deltaTime;
+        if (reactionTime < 0)
         {
-            FindPath(transform.position, player.transform.position);
-            TravelAlongPath();
+            reactionTime = 1f;
+            if (PlayerInRangeAndSight())
+            {
+                currentState = AiState.SHOOTING;
+                target = player.transform.position;
+            }
+            else
+            {
+                currentState = AiState.SEARCHING;
+                FindPath(transform.position, lastSeenPos);
+            }
         }
     }
 
@@ -174,6 +205,7 @@ public class AiMovement : MonoBehaviour
                 if(hit.transform == player.transform)
                 {
                     isInRangeAndSight = true;
+                    lastSeenPos = player.transform.position;
                 }
             }
         }
@@ -182,27 +214,27 @@ public class AiMovement : MonoBehaviour
 
     private void Reload()
     {
-        if (!shotReady)
+        if (shootTimer < shootColldown)
         {
             shootTimer += Time.deltaTime;
-            if (shootTimer >= shootColldown)
-            {
-                shotReady = true;
-            }
         }
     }
     private void Shoot()
     {
-        if (shotReady)
+        if (shootTimer >= shootColldown)
         {
             m_boulet.GetComponent<physics>().speed = transform.forward*20f;
             Instantiate(m_boulet, 
                 transform.position + transform.forward, 
                 transform.rotation);
             shootTimer = 0f;
-            shotReady = false;
         }
     }
     
     #endregion
+    
+    private enum AiState
+    {
+        SEARCHING, SHOOTING
+    }
 }
