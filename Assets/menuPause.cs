@@ -16,6 +16,7 @@ public class menuPause : MonoBehaviour
     void Awake()
     {
         a_pause = settings.FindActionMap("UI").FindAction("Pause");
+        a_pause.Enable();
         p_menuPause.SetActive(false);
     }
 
@@ -50,5 +51,10 @@ public class menuPause : MonoBehaviour
         Time.timeScale = 1;
         p_menuPause.SetActive(false);
         SceneManager.LoadScene("Menu");
+    }
+
+    private void OnDisable()
+    {
+        a_pause.Disable();
     }
 }
