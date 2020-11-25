@@ -13,12 +13,6 @@ public class menuFin : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void onClicNon()
-    {
-        PlayerPrefs.DeleteAll(); // Pour être sur que les paramètres de touches redeviennent normaux en fermant l'application
-        Application.Quit();
-    }
-
     // Start is called before the first frame update
     void Start()
     {
